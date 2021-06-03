@@ -17,7 +17,7 @@ Route::get('/contact', 'PagesController@contact' );
 
 
 Route::post('/create', 'viviendacontroller@create');
-Route::get('/', 'viviendacontroller@read');
+#Route::get('/', 'viviendacontroller@read');
 Route::post('/update/{id}', 'viviendacontroller@update');
 Route::delete('/delete/{id}', 'viviendacontroller@delete');
 Route::get('/update/{id}', 'viviendacontroller@edit');

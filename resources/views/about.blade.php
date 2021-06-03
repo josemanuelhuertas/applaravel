@@ -23,6 +23,7 @@
 
             .full-height {
                 height: 100vh;
+                
             }
 
             .flex-center {
@@ -39,6 +40,7 @@
                 position: absolute;
                 right: 10px;
                 top: 18px;
+                
             }
 
             .content {
@@ -66,16 +68,14 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+
+                <<div class="top-right links">
+
+                <a href="{{ url('/') }}">Inicio</a>
+                <a href="{{ url('/about') }}">A cerca de </a>
+                <a href="{{ url('/contact') }}">Contacto</a>
+
                 </div>
-            @endif
 
             <div class="content">
                 <div class="title m-b-md">
@@ -89,6 +89,7 @@
                 
                 </div>
                 <div class="quote">Pagina de informacion de nuestro sistio</div>
+                <div class="footer"> <strong>Todos los derechos reservados</strong> </div>
                 
 <!--
                 <div class="links">
