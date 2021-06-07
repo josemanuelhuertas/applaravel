@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: white;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -23,7 +23,6 @@
 
             .full-height {
                 height: 100vh;
-                
             }
 
             .flex-center {
@@ -36,15 +35,18 @@
                 position: relative;
             }
 
-            .top-right {
+            .top-left {
+
                 position: absolute;
-                right: 10px;
-                top: 18px;
-                
+                top: 10px;
+                left: 200px;
+
             }
 
             .content {
                 text-align: center;
+                font-size: 50px;
+                color: black;
             }
 
             .title {
@@ -52,9 +54,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: white;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 25px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -64,43 +66,77 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+
+
+            *{
+
+                margin: 0;
+                padding: 0;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+           header {
+               width: 100%;
+           }
+           .navegacion{
+               width: 1500px;
+               margin: 30px auto;
+               background: purple;
+           }
+
+           .navegacion ul{
+               list-style: none;
+           }
+           .menu > li {
+
+               position: relative;
+               display: inline-block;
+           }
+           .menu > li > a{
+               display: block;
+               padding: 15px 20px;
+               color: black;
+               font-family: 'Open sans';
+               text-decoration: none;
+           }
+
+           .menu li a:hover{
+               color: yellow;
+               transition: all .3s;
+
+           }
+
         </style>
     </head>
     <body>
+            
+            <header>
+                <nav class="navegacion">
+                    <ul class="menu">
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="{{ url('/about') }}">A cerca de </a></li>
+                        <li><a href="{{ url('/contact') }}">Contacto</a></li>
+                    </ul>
+            </header>
+
+
+
+
+
         <div class="flex-center position-ref full-height">
-
-                <<div class="top-right links">
-
-                <a href="{{ url('/') }}">Inicio</a>
-                <a href="{{ url('/about') }}">A cerca de </a>
-                <a href="{{ url('/contact') }}">Contacto</a>
-
-                </div>
-
+            
+            
             <div class="content">
-                <div class="title m-b-md">
-                    Acerca sobre nosotros 
+                
 
 
-                <p>Empresa con mas de 10 años en el sector y concretamente en la zona del Poligonosur, nuestro lema es "A problemas soluciones"</p>
-                <p>intentamos buscar soluciones a aquellos clientes que nhecesitan u cambio de vivienda o en general de vida.</p>
-                <p>Gestionamos la compra, venta o la financiación de su nuevo hogar. Le ofrecemos transparencia y confianza en nuestra gestion, formalidad y seriedad</p>
-                <p> Estamos a su disposicion en nuestra oficina, nos adaptamos a su horario y a sus circustancias</p>                
-                
-                </div>
-                <div class="quote">Pagina de informacion de nuestro sistio</div>
-                <div class="footer"> <strong>Todos los derechos reservados</strong> </div>
-                
-<!--
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-                -->
+                <div class="quote">Contacto de nuestro sitio</div>
             </div>
+
+
         </div>
     </body>
 </html>

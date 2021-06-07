@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: white;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -35,14 +35,18 @@
                 position: relative;
             }
 
-            .top-right {
+            .top-left {
+
                 position: absolute;
-                right: 10px;
-                top: 18px;
+                top: 10px;
+                left: 200px;
+
             }
 
             .content {
                 text-align: center;
+                font-size: 50px;
+                color: black;
             }
 
             .title {
@@ -50,9 +54,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: white;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 25px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -62,45 +66,73 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+
+
+            *{
+
+                margin: 0;
+                padding: 0;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .formulario{
+
+                color: black;
+                font-size: 35px;  
+            }
+
+           header {
+               width: 100%;
+           }
+           .navegacion{
+               width: 1500px;
+               margin: 30px auto;
+               background: purple;
+           }
+
+           .navegacion ul{
+               list-style: none;
+           }
+           .menu > li {
+
+               position: relative;
+               display: inline-block;
+           }
+           .menu > li > a{
+               display: block;
+               padding: 15px 20px;
+               color: black;
+               font-family: 'Open sans';
+               text-decoration: none;
+           }
+
+           .menu li a:hover{
+               color: yellow;
+               transition: all .3s;
+
+           }
+
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
             
-            <div class="top-right links">
+            <header>
+                <nav class="navegacion">
+                    <ul class="menu">
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="{{ url('/about') }}">A cerca de </a></li>
+                        <li><a href="{{ url('/contact') }}">Contacto</a></li>
+                    </ul>
+            </header>
+            <div class="flex-center position-ref full-height">
+                <div class="formulario">
 
-                <a href="{{ url('/') }}">Inicio</a>
-                <a href="{{ url('/about') }}">A cerca de </a>
-                <a href="{{ url('/contact') }}">Contacto</a>
+                    <p>aqui va el formulario</p>
 
+                <div>
             </div>
-            
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Contacto      
-
-                    <form action="../form-result.php" target="_blank">
-                    <fieldset>
-                    <legend>Datos personales</legend>
-                    <p>Nombre: <input type="text" name="nombre" size="30"></p>
-                    <p>Edad: <input type="number" name="edad"></p>
-                    <textarea name="texto" rows="4" cols="40">Escriba algo</textarea>
-                    <input type="submit" value="Enviar" disabled>
-                    </fieldset>
-                    </form>            
-                </div>
-                <div class="quote">Pagina de contacto de nuestro sistio</div>
-<!--
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-                -->
-            </div>
-        </div>
     </body>
 </html>
