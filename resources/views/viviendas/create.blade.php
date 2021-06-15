@@ -1,4 +1,3 @@
-formulario de creacion de casas
 
 <!DOCTYPE html>
 <html lang="en">
@@ -118,9 +117,10 @@ formulario de creacion de casas
             <header>
                 <nav class="navegacion">
                     <ul class="menu">
-                        <li><a href="{{ url('/viviendas/welcome') }}">Inicio</a></li>
-                        <li><a href="{{ url('/viviendas/about') }}">A cerca de </a></li>
-                        <li><a href="{{ url('/viviendas/contact') }}">Contacto</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="{{ url('/about') }}">A cerca de </a></li>
+                        <li><a href="{{ url('/contact') }}">Contacto</a></li>
+                        <li><a href="{{ url('/viviendas/create') }}"> Añadir viviendas</a></li>
                     </ul>
             </header>
 

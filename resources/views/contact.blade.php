@@ -263,6 +263,7 @@
                         <li><a href="{{ url('/') }}">Inicio</a></li>
                         <li><a href="{{ url('/about') }}">A cerca de </a></li>
                         <li><a href="{{ url('/contact') }}">Contacto</a></li>
+                        <li><a href="{{ url('/viviendas/create') }}"> Añadir viviendas</a></li>
                     </ul>
             </header>
             

@@ -32,6 +32,3 @@ Route::get('/viviendas/create', 'viviendacontroller@create');
 */
 
 Route::resource('viviendas',viviendacontroller::class);
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
