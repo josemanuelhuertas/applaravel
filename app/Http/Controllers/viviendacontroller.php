@@ -11,8 +11,9 @@ class viviendacontroller extends Controller
     public function index ()
     {
         //
-        $datos['viviendas']=vivienda::paginate(5);
-        return view('viviendas.index',$datos );
+        //$datos['viviendas']=vivienda::paginate(5);
+        //return view('viviendas.index',$datos );
+        return view('viviendas.index');
     }
 
 
