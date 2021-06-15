@@ -123,20 +123,14 @@
             </header>
 
 
-
-
-
-            <div class="flex-center position-ref full-height">
-            
-            
-            <div class="content">
+           <div class="content">
                 
 
+               
+           
+           </div>
 
-                <div class="quote">Inmobiliaria spacelolo </div>
-            </div>
 
-
-            </div>
+           
     </body>
 </html>

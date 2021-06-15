@@ -45,7 +45,7 @@
 
             .content {
                 text-align: center;
-                font-size: 50px;
+                font-size: 35px;
                 color: black;
             }
 
@@ -109,6 +109,10 @@
 
            }
 
+           .wp-block-column[style*="flex-basis"] {
+                flex-grow: 0;
+            }
+
         </style>
     </head>
     <body>
@@ -131,9 +135,22 @@
             
             <div class="content">
                 
+                 Empresa con más de 10 años de experiencia en el sector, nuestro lema es “A problemas soluciones”, intentamos buscar soluciones a aquellos clientes que necesitan un cambio de vivienda o en general de vida. Gestionamos la venta, la compra o la financiación  de su nuevo hogar. Le ofrecemos transparencia y confianza en nuestra gestión, formalidad y seriedad. Estamos a su disposición en nuestra oficina, nos adaptamos a su horario y a sus circunstancias. <br>
+
+                 <img loading="lazy" src="http://dydpisosycasas.es/wp-content/uploads/2020/11/imagen_2020-11-16_234251.png" alt="" class="wp-image-112" width="657" height="599"><br>
+
+                <div class="wp-block-column" style="flex-basis:25%">
+                  <h3>AGENCIA INMOBILIARIA Y DE FINANCIACIÓN</h3>
 
 
-                <div class="quote">Contacto de nuestro sitio</div>
+
+                    <p>Gestionamos la venta, la compra y la financiación independientes.</p>
+
+
+
+                    <ul><li>Alquiler</li><li>Seguros de Protección de pagos</li><li>Certificados Energéticos.</li><li>Inscripción de Herencias, VPO, Obra Nueva</li></ul>
+                </div>
+                
             </div>
 
 

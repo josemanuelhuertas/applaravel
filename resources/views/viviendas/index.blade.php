@@ -133,12 +133,39 @@ mostrar la lista de viviendas
             <div class="flex-center position-ref full-height">
             
             
-            <div class="content">
-                
+                    <div class="content">
+                        
 
+                        <table class="table table-light">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>localidad</th>
+                                    <th>tipo</th>
+                                    <th>m2</th>
+                                    <th>num_hab</th>
+                                    <th>num_banos</th>
+                                    <th>piscina</th>
+                                    <th>garaje</th>
+                                </tr>
+                            </thead>
 
-                <div class="quote">Inmobiliaria spacelolo </div>
-            </div>
+                            <tbody>
+                                    @foreach ($empleados as $empleado)
+                                <tr>
+                                    <td>{{ $vivienda->id }}</td>
+                                    <td>{{ $vivienda->localidad }}</td>
+                                    <td>{{ $vivienda->tipo }}</td>
+                                    <td>{{ $vivienda->m2 }}</td>
+                                    <td>{{ $vivienda->num_hab }}</td>
+                                    <td>{{ $vivienda->num_banos }}</td>
+                                    <td>{{ $vivienda->piscina }}</td>
+                                    <td>{{ $vivienda->garaje }}</td>
+                                    
+                                </tr>
+                            </tbody>
+
+                    </div>
 
 
             </div>
