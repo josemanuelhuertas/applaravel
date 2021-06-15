@@ -1,3 +1,5 @@
+mostrar la lista de viviendas
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -121,7 +123,9 @@
                         <li><a href="{{ url('/contact') }}">Contacto</a></li>
                     </ul>
             </header>
-
+           <div class="content">
+                
+           </div>
 
 
 

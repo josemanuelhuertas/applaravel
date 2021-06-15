@@ -1,3 +1,5 @@
+formulario de creacion de casas
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,7 +47,7 @@
 
             .content {
                 text-align: center;
-                font-size: 50px;
+                font-size: 25px;
                 color: black;
             }
 
@@ -116,27 +118,51 @@
             <header>
                 <nav class="navegacion">
                     <ul class="menu">
-                        <li><a href="{{ url('/') }}">Inicio</a></li>
-                        <li><a href="{{ url('/about') }}">A cerca de </a></li>
-                        <li><a href="{{ url('/contact') }}">Contacto</a></li>
+                        <li><a href="{{ url('/viviendas/welcome') }}">Inicio</a></li>
+                        <li><a href="{{ url('/viviendas/about') }}">A cerca de </a></li>
+                        <li><a href="{{ url('/viviendas/contact') }}">Contacto</a></li>
                     </ul>
             </header>
 
-
-
-
-
-            <div class="flex-center position-ref full-height">
-            
-            
-            <div class="content">
+           <div class ="content">
                 
+                <form action="{{url('/vivienda/store')}}" method="post">
+                
+                <label for="Localidad">Localidad</label>
+                <input type="text" name="localidad" id="localidad">
+                <br>
+
+                <label for="tipo">tipo</label>
+                <input type="text" name="tipo" id="tipo">
+                <br>
+
+                <label for="m2">metros cuadrados</label>
+                <input type="text" name="m2" id="m2">
+                <br>
+
+                <label for="num_hab">Numero de habitaciones</label>
+                <input type="text" name="num_hab" id="num_hab">
+                <br>
+
+                <label for="num_banos">numero de baños</label>
+                <input type="text" name="num_banos" id="num_banos">
+                <br>
+
+                <label for="piscina">piscina</label>
+                <input type="text" name="piscina" id="piscina">
+                <br>
+
+                <label for="garaje">garaje</label>
+                <input type="text" name="garaje" id="garaje">
+                <br>
+
+                <input type="submit" value="Guardar datos">
+                <br>
+                                               
+                </form>
+
+           </div>
 
 
-                <div class="quote">Inmobiliaria spacelolo </div>
-            </div>
-
-
-            </div>
     </body>
 </html>

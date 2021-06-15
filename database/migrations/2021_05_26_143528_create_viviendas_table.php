@@ -14,15 +14,16 @@ class CreateViviendasTable extends Migration
     public function up()
     {
         Schema::create('viviendas', function(Blueprint $table) {
+            $table -> increments('id');
             $table -> string('localidad', 50);
             $table -> string('tipo', 50);
-            $table -> numeric('m2', 10);
-            $table -> numeric('num_hab', 10);
-            $table -> numeric('num_banos', 10);
+            $table -> decimal('m2', $precision = 5,$scale = 2);
+            $table -> integer('num_hab');
+            $table -> integer('num_banos');
             $table -> string('piscina', 2);
-            $table -> string('garaje', 2)
+            $table -> string('garaje', 2);
             $table -> timestamps();
-        }
+        });
     }
 
     /**
@@ -32,6 +33,6 @@ class CreateViviendasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('viviendas')
+        Schema::dropIfExists('viviendas');
     }
 }

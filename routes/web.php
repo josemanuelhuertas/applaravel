@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +17,18 @@ Route::get('/about', 'PagesController@about' );
 Route::get('/contact', 'PagesController@contact' );
 
 
-Route::post('/create', 'viviendacontroller@create');
+#Route::post('/create', 'viviendacontroller@create');
 #Route::get('/', 'viviendacontroller@read');
-Route::post('/update/{id}', 'viviendacontroller@update');
-Route::delete('/delete/{id}', 'viviendacontroller@delete');
-Route::get('/update/{id}', 'viviendacontroller@edit');
-Route::get('/delete/{id}', 'viviendacontroller@preguntar');
+#Route::post('/update/{id}', 'viviendacontroller@update');
+#Route::delete('/delete/{id}', 'viviendacontroller@delete');
+#Route::get('/update/{id}', 'viviendacontroller@edit');
+#Route::get('/delete/{id}', 'viviendacontroller@preguntar');
+
+/*route::get('/viviendas', function () {
+    return view ('viviendas.index');
+});
+
+Route::get('/viviendas/create', 'viviendacontroller@create');
+*/
+
+Route::resource('viviendas',viviendacontroller::class);

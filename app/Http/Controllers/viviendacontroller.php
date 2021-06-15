@@ -2,68 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\vivienda;
 use Illuminate\Http\Request;
 
 class viviendacontroller extends Controller
 {
-    public function create (Request $request){
 
-        $vivienda = new vivienda();
-
-        $vivienda -> localidad = $request -> localidad
-        $vivienda -> tipo = $request -> tipo
-        $vivienda -> m2 = $request -> m2
-        $vivienda -> num_hab = $request -> num_hab
-        $vivienda -> num_banos = $request -> num_banos
-        $vivienda -> piscina = $request -> piscina
-        $vivienda -> garaje = $request -> garaje
-
-        $vivienda -> save();
-        return redirect('/');
+    public function index ()
+    {
+        //
+        $datos['viviendas']=vivienda::paginate(5);
+        return view('viviendas.index',$datos );
     }
 
-    public function read(){
+
+    public function create ()
+    {
+        //
+        return view('viviendas.create');
+   }
+
+   public function store(Request $request)
+   {
+       //
+        //$datosvivienda = request()->all();
+       //$datosvivienda = request()->except('_token')
+
+       //if($request->hasFile('foto')) {
+           //$datosvivienda['foto']=$request->file('foto')->store('uploads', 'public');
+
+       //}
+        //vivienda::insert($datosvivienda);
+
         
-        $vivienda = vivienda::all();
-        return view('viviendas.index', ['viviendas' => $viviendas]);
-    }
-
-    public function edit($id){
+       //return response()->json($datosvivienda);
         
-        $viviendas = vivienda::all();
-        $house = vivienda::findOrFail($id);
-        return view('viviendas.index', ['viviendas' => $viviendas, 'house' => $house]);
+       $vivienda = new vivienda;
+       $vivienda->localidad=$request->input('localidad');
+       $vivienda->tipo=$request->input('tipo');
+       $vivienda->m2=$request->input('m2');
+       $vivienda->num_hab=$request->input('num_hab');
+       $vivienda->num_banos=$request->input('num_banos');
+       $vivienda->piscina=$request->input('piscina');
+       $vivienda->garaje=$request->input('garaje');
+       $vivienda->save();
+       return view('viviendas.create');
+
+       /*
+       $vivienda = new vivienda();
+
+       $vivienda -> localidad = $request -> localidad
+       $vivienda -> tipo = $request -> tipo
+       $vivienda -> m2 = $request -> m2
+       $vivienda -> num_hab = $request -> num_hab
+       $vivienda -> num_banos = $request -> num_banos
+       $vivienda -> piscina = $request -> piscina
+       $vivienda -> garaje = $request -> garaje
+    
+       $vivienda -> save();
+       return redirect('/viviendas/create');
+        */
     }
 
-    public function  update (Request $request, $id){
-        
-        $vivienda = vivienda::findOrFail($id);
-
-        $vivienda -> localidad = $request -> localidad
-        $vivienda -> tipo = $request -> tipo
-        $vivienda -> m2 = $request -> m2
-        $vivienda -> num_hab = $request -> num_hab
-        $vivienda -> num_banos = $request -> num_banos
-        $vivienda -> piscina = $request -> piscina
-        $vivienda -> garaje = $request -> garaje
-
-        $vivienda -> save();
-        return redirect('/');
-    }
-
-    public function preguntar($id){
-        
-        $vivienda = vivienda::all();
-        $houseDelete = vivienda::findOrFail($id);
-
-        return view('viviendas.index', ['viviendas' => $viviendas, 'houseDelete' => $houseDelete]);
-    }
-
-    public function delete($id){
-        
-        $vivienda = vivienda::findOrFail($id);
-        $vivienda -> delete();
-
-        return redirect('/');
-    }
 }
