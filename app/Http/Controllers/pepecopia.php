@@ -24,8 +24,7 @@ class viviendacontroller extends Controller
 
     public function read(){
         
-        $vivienda = vivienda::all();
-        return view('viviendas.index', ['viviendas' => $viviendas]);
+       //
     }
 
     public function edit($id){

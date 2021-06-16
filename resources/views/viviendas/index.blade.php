@@ -1,5 +1,3 @@
-mostrar la lista de viviendas
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -151,7 +149,7 @@ mostrar la lista de viviendas
                             </thead>
 
                             <tbody>
-                                    @foreach ($empleados as $empleado)
+                                    @foreach ($viviendas as $vivienda)
                                 <tr>
                                     <td>{{ $vivienda->id }}</td>
                                     <td>{{ $vivienda->localidad }}</td>
@@ -161,8 +159,8 @@ mostrar la lista de viviendas
                                     <td>{{ $vivienda->num_banos }}</td>
                                     <td>{{ $vivienda->piscina }}</td>
                                     <td>{{ $vivienda->garaje }}</td>
-                                    
                                 </tr>
+                                    @endforeach
                             </tbody>
 
                     </div>

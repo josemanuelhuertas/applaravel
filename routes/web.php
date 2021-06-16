@@ -31,4 +31,7 @@ Route::get('/contact', 'PagesController@contact' );
 Route::get('/viviendas/create', 'viviendacontroller@create');
 */
 
-Route::resource('viviendas',viviendacontroller::class);
+Route::get('/vivienda', 'viviendacontroller@index');
+Route::get('/vivienda/create', 'viviendacontroller@create');
+Route::post('/vivienda/store', 'viviendacontroller@store');
+#Route::resource('vivienda',viviendacontroller::class);
